@@ -1,6 +1,7 @@
 function createEntry(moods) {
-  location.reload();
-  let txt = document.querySelector('#txtBox').value;
+  // location.reload();
+  console.log("Heard");
+  let txt = document.querySelector('#text').value;
   var today = new Date();
   var dd = String(today.getDate()).padStart(2, '0');
   var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
