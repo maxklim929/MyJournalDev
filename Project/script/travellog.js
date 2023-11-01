@@ -21,7 +21,7 @@ document.getElementById('submitbutton').addEventListener("click", () => {
     let desc = document.getElementById('text').value;
     document.getElementById("card-container").innerHTML +=
         `<div class="card" style="width: 50%; margin-top: 1rem;">
-    <img src="${cat}.jpeg" class="card-img-top" alt="...">
+    <img src="./images/${cat}.jpeg" class="card-img-top" alt="...">
     <div class="card-body">
         <h5 class="card-title">${restname}</h5>
         <h6 class="card-subtitle mb-2 text-muted">${cat}, ${city}</h6>
@@ -38,7 +38,7 @@ if (entries != '') {
     for (let entry of data) {
         document.getElementById("card-container").innerHTML +=
         `<div class="card" style="width: 50%; margin-top: 1rem;">
-    <img src="${entry[1]}.jpeg" class="card-img-top" alt="...">
+    <img src="./images/${entry[1]}.jpeg" class="card-img-top" alt="...">
     <div class="card-body">
     <h5 class="card-title">${entry[0]}</h5>
     <h6 class="card-subtitle mb-2 text-muted">${entry[1]}, ${entry[2]}</h6>

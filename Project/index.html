@@ -11,7 +11,7 @@
     <meta name="author" content="Max Klimenko">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <link rel="stylesheet" href="MyJournalCSS.css">
+    <link rel="stylesheet" href="./css/index.css">
     <title>HomePage</title>
 </head>
 
@@ -59,7 +59,7 @@
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
-        <h5 id='quote'></h5> <a href="saved_quote.txt" download="saved_quote" id="savequotebtn"><button type="button"
+        <h5 id='quote'></h5> <a href="./design/saved_quote.txt" download="saved_quote" id="savequotebtn"><button type="button"
                 class="btn btn-dark btn-sm" id="saveQuote">Save Quote</button></a>
     </div>
     <br>
@@ -98,7 +98,7 @@
     <br>
 
     <div id="over">
-        <img src="PikPng.com_book-icon-png_486897.png" width="300" height="300" alt="A picture of a journal">
+        <img src="./images/PikPng.com_book-icon-png_486897.png" width="300" height="300" alt="A picture of a journal">
     </div>
 
 
@@ -111,7 +111,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    <script src="./script/index.js"></script>
     <script>
         document.getElementById("savequotebtn").setAttribute("href", document.getElementById("quote").innerHTML + ".txt");
     </script>

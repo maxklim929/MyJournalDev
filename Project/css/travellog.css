@@ -1,0 +1,6 @@
+#travel-container {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+}
