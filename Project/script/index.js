@@ -38,7 +38,6 @@ function saveQuote(quote) {
 
 let randQuote = Math.random() * (quotes.length - 1);
 randQuote = Math.trunc(randQuote);
-console.log(randQuote);
 let quote = quotes[randQuote];
 document.querySelector('#quote').innerText = quote;
 

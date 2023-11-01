@@ -59,8 +59,8 @@
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
-        <h5 id='quote'></h5> <a href="./design/saved_quote.txt" download="saved_quote" id="savequotebtn"><button type="button"
-                class="btn btn-dark btn-sm" id="saveQuote">Save Quote</button></a>
+        <h5 id='quote'></h5> <a href="saved_quote.txt" download="saved_quote" id="savequotebtn"><button
+                type="button" class="btn btn-dark btn-sm" id="saveQuote">Save Quote</button></a>
     </div>
     <br>
     <br>
@@ -113,7 +113,7 @@
         crossorigin="anonymous"></script>
     <script src="./script/index.js"></script>
     <script>
-        document.getElementById("savequotebtn").setAttribute("href", document.getElementById("quote").innerHTML + ".txt");
+        document.getElementById("savequotebtn").setAttribute("href", "./design/" + document.getElementById("quote").innerHTML + ".txt");
     </script>
 
 </body>
