@@ -1,6 +1,22 @@
+* {
+    font-family: serif;
+}
+
+h1 {
+    font-family: sans-serif;
+}
+
 #lists {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.card {
+    margin-top: 1rem;
+}
+
+a {
+    color: rgb(3, 3, 181);
 }

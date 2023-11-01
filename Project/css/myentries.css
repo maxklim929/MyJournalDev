@@ -1,3 +1,11 @@
+* {
+    font-family: serif;
+}
+
+h1 {
+    font-family: sans-serif;
+}
+
 #entries {
     width: 80%;
     margin-top: 1rem;

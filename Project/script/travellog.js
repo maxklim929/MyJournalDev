@@ -1,5 +1,4 @@
 function saveTravel(rest, cat, city, desc) {
-    location.reload();
     let info = [];
     info.push(rest, cat, city, desc);
     if (data == null) {
@@ -7,20 +6,18 @@ function saveTravel(rest, cat, city, desc) {
     } else {
         data.push(info);
     }
-    console.log("Saved")
     localStorage.setItem('travelLog', JSON.stringify(data)); // update localStorage
-    console.log(data);
 }
 
 
 document.getElementById('submitbutton').addEventListener("click", () => {
     let restname = document.getElementById('name').value;
     let cat = document.getElementById('select').value;
-    console.log(cat)
     let city = document.getElementById('city').value;
     let desc = document.getElementById('text').value;
-    document.getElementById("card-container").innerHTML +=
-        `<div class="card" style="width: 50%; margin-top: 1rem;">
+    if (restname.length != 0) {
+        document.getElementById("card-container").innerHTML +=
+            `<div class="card">
     <img src="./images/${cat}.jpeg" class="card-img-top" alt="${cat} image">
     <div class="card-body">
         <h5 class="card-title">${restname}</h5>
@@ -28,16 +25,16 @@ document.getElementById('submitbutton').addEventListener("click", () => {
         <p class="card-text">${desc}</p>
     </div>
     </div>`;
-    console.log("Clicked");
-    saveTravel(restname, cat, city, desc);
+        saveTravel(restname, cat, city, desc);
+    }
 });
 
 let entries = localStorage.getItem('travelLog');
 var data = JSON.parse(entries);
-if (entries != '') {
+if (data != null && entries != '') {
     for (let entry of data) {
         document.getElementById("card-container").innerHTML +=
-            `<div class="card" style="width: 50%; margin-top: 1rem;">
+            `<div class="card">
     <img src="./images/${entry[1]}.jpeg" class="card-img-top" alt="${entry[1]} image">
     <div class="card-body">
     <h5 class="card-title">${entry[0]}</h5>

@@ -7,11 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/travellog.css">
     <meta name="author" content="Max Klimenko">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <title>HomePage</title>
+    <title>Report</title>
 </head>
 
 <body style="background-color: rgb(251, 211, 166);">
@@ -39,53 +38,59 @@
                             style="color:white">TravelLog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://maxklim929.github.io/MyJournal/Project/mylist.html"
+                        <a class="nav-link" href="https://maxklim929.github.io/MyJournal/mylist.html"
                             style="color:white">MyLists</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://maxklim929.github.io/MyJournal/Project/report.html"
+                        <a class="nav-link" href="https://maxklim929.github.io/MyJournal/report.html"
                             style="color:white">Report</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div id="travel-container">
-        <div class="card" style="background-color: rgb(202, 157, 111);" id="newentry">
-            <div class="card-body">
-                <div id="travel-forms">
-                    <form>
-                        <div class="form-group">
-                            <label for="Name">Place Name</label>
-                            <input class="form-control" id="name" placeholder="Burgers 'n Stuff" aria-required="true" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="select">Category</label>
-                            <select class="form-control" id="select" required>
-                                <option>Restaurant</option>
-                                <option>Park</option>
-                                <option>Store</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="City">City</label>
-                            <input class="form-control" id="city" placeholder="New York">
-                        </div>
-                        <div class="form-group">
-                            <label for="description">Description</label>
-                            <textarea class="form-control" id="text" rows="5"></textarea>
-                        </div>
-                        <div>
-                            <button id="submitbutton" class="btn btn-success" type="submit">Submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div id="card-container">
-        </div>
-    </div>
-
+    <p>
+        1. This is the url to my github repo: https://github.com/maxklim929/MyJournalDev/tree/main/Project
+    </p>
+    <p>
+        2. This is the url to the published site: https://maxklim929.github.io/MyJournalDev/Project/index.html
+    </p>
+    <p>
+        3. This is "report.html"
+    </p>
+    <p>
+        4. index.html (1) is the home page for the site, NewEntry (2) is where the user types in a new entry,
+        MyEntries (3) is where the site keeps track of the entries, TravelLog (4) is where the site can keep track of your
+        inputted travels, and MyLists (5) will have api of lists like workout routines and cooking recipes
+        that will be implemented in the next phase.
+    </p>
+    <p>
+        5. Meaningful headers in place.
+    </p>
+    <p>
+        6. Implemented a nav bar.
+    </p>
+    <p>
+        7. Bootstrap handles a good chunk, but for the TravelLog page, on mobile screens (256) it will show in column rather than row.
+    </p>
+    <p>
+        8. Alt for home page implemented, same with images from TravelLog, i.e. Restaurant, Park, and Store.
+    </p>
+    <p>
+        9. No errors.
+    </p>
+    <p>
+        10. Fonts implemented.
+    </p>
+    <p>
+        11. TravelLog has a form, one field is required, that being the Place Name field.
+    </p>
+    <p>
+        12. MyLists has a link to Journal Prompts for help.
+    </p>
+    <p>
+        13. MyLists will have lists of ideas for people to try out or write about: workouts, affirmations, recipes.
+    </p>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -95,8 +100,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="./script/travellog.js"></script>
-
 </body>
 
 </html>

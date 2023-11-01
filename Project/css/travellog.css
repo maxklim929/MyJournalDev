@@ -1,6 +1,38 @@
+* {
+    font-family: serif;
+}
+
+h1 {
+    font-family: sans-serif;
+}
+
 #travel-container {
-    margin-top: 2rem;
-    margin-left: 1rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#newentry {
+    height: 50%;
+    margin-right: 1rem;
+}
+
+.card {
+    width: 100%;
+}
+
+@media (max-width: 256px) {
+    #travel-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    #newentry {
+        height: 50%;
+        margin-bottom: 1rem;
+    }
 }
