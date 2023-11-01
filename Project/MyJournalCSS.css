@@ -1,0 +1,32 @@
+#textboxid
+{
+    height:200px;
+    font-size:14pt;
+}
+
+#over img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+#travel-container {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#newentry {
+    display: flex;
+    margin-top: 0.5rem;
+    justify-content: center;
+    align-content: center;
+}
+
+#lists {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

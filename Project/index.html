@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="MyJournalCSS.css">
+    <meta name="author" content="Max Klimenko">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="MyJournalCSS.css">
+    <title>HomePage</title>
+</head>
+
+<body style="background-color: rgb(251, 211, 166);">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:rgb(110, 38, 14)">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://maxklim929.github.io/MyJournal/index.html"
+                style="color:white"><strong>MyJournal</strong></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://maxklim929.github.io/MyJournal/MyJournal.html"
+                            style="color:white">NewEntry</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://maxklim929.github.io/MyJournal/MyEntries.html"
+                            style="color:white">MyEntries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://maxklim929.github.io/MyJournal/travel-track.html"
+                            style="color:white">TravelLog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://maxklim929.github.io/MyJournal/mylist.html"
+                            style="color:white">MyLists</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="mx-auto">
+        <h1 style="text-align:center">Welcome to MyJournal!</h1>
+
+        <h2 style="text-align:center">An app dedicated to hear all your troubles and enjoyable occassions.</h2>
+    </header>
+    <br>
+    <br>
+
+    <div class="alert alert-primary mx-auto" role="alert" style="width:80%; text-align:center">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h5 id='quote'></h5> <a href="saved_quote.txt" download="saved_quote" id="savequotebtn"><button type="button"
+                class="btn btn-dark btn-sm" id="saveQuote">Save Quote</button></a>
+    </div>
+    <br>
+    <br>
+
+    <div style="text-align: center">
+        <button type="button" class="btn btn-secondary btn-lg" id="infoButton">What is MyJournal?</button>
+        <div class="modal fade" tabindex="-1" id="modalInfo">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">What is MyJournal?</h5>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mx-auto" id="modalText">
+                        MyJournal is a site where you can write about all your problems and needs, all you need to do is
+                        go to the
+                        NewEntry tab and type away your experiences during the day, express the feelings you feel at the
+                        present moment, and log your journal!
+                        Afterwards, if you ever want access your previous entries, just click on the MyEntries tab and
+                        you'll have access to all your previous entries,
+                        feelings, and the date you wrote them.
+                    </div>
+                    <div class="modal-footer justify-content-start" id="subtotal">
+                        <ul id="total"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div id="over">
+        <img src="PikPng.com_book-icon-png_486897.png" width="300" height="300" alt="A picture of a journal">
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="HomeJS.js"></script>
+    <script>
+        document.getElementById("savequotebtn").setAttribute("href", document.getElementById("quote").innerHTML + ".txt");
+    </script>
+
+</body>
+
+</html>
