@@ -1,3 +1,4 @@
+document.getElementById("prevEntries").innerHTML = ""
 function filterEntries(mood) {
   let modalText = document.querySelector("#modalText");
   modalText.innerHTML = "";
@@ -34,7 +35,7 @@ function filterEntries(mood) {
     var preEntry = document.createElement('section');
     preEntry.classList.add('card', 'mx-auto');
     preEntry.style.width = '80%';
-    var header = document.createElement('h4');
+    var header = document.createElement('h2');
     header.classList.add('card-header');
     header.style.backgroundColor = 'rgb(192,192,192)';
     header.innerText = entry[1];
@@ -47,22 +48,23 @@ function filterEntries(mood) {
       innerDiv.append(br);
       var used = [];
       for (let mood of entry[2]) {
-        let badge = document.createElement('span');
+        let badge = document.createElement('button');
         let color;
         if (mood == 'Nervous') {
-          color = 'dark';
+          color = 'btn-dark';
         } else if (mood == 'Sad') {
-          color = 'primary';
+          color = 'btn-primary';
         } else if (mood == 'Mad') {
-          color = 'danger';
+          color = 'btn-danger';
         } else if (mood == 'Thankful') {
-          color = 'warning';
+          color = 'btn-warning';
         } else {
-          color = 'success'
+          badge.style.backgroundColor = 'green';
+          badge.style.color = 'white';
         }
 
         if (!used.includes(mood)) {
-          let badgeColor = 'btn-' + color;
+          let badgeColor = color;
           badge.classList.add('btn', badgeColor, "btn-sm", "px-2", "mx-2");
           badge.innerText = mood;
           badge.id = mood + "Entry";
