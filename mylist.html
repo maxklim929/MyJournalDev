@@ -8,16 +8,17 @@
     <meta name="author" content="Max Klimenko">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/travellog.css">
+    <link rel="stylesheet" href="MyJournalCSS.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>HomePage</title>
+    <link rel="stylesheet" href="./css/mylist.css">
+    <title>MyList</title>
 </head>
 
 <body style="background-color: rgb(251, 211, 166);">
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color:rgb(110, 38, 14)">
         <div class="container-fluid">
-            <a class="navbar-brand" href="https://maxklim929.github.io/MyJournalDev/Project/index.html"
+            <a class="navbar-brand" href="https://maxklim929.github.io/MyJournalDev/index.html"
                 style="color:white"><strong>MyJournal</strong></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -27,67 +28,57 @@
             <div class="navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="https://maxklim929.github.io/MyJournalDev/Project/newentry.html"
+                        <a class="nav-link" href="https://maxklim929.github.io/MyJournalDev/newentry.html"
                             style="color:white">NewEntry</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://maxklim929.github.io/MyJournalDev/Project/myentries.html"
+                        <a class="nav-link" href="https://maxklim929.github.io/MyJournalDev/myentries.html"
                             style="color:white">MyEntries</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://maxklim929.github.io/MyJournalDev/Project/travellog.html"
+                        <a class="nav-link" href="https://maxklim929.github.io/MyJournalDev/travellog.html"
                             style="color:white">TravelLog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://maxklim929.github.io/MyJournalDev/Project/mylist.html"
+                        <a class="nav-link" href="https://maxklim929.github.io/MyJournalDev/mylist.html"
                             style="color:white">MyLists</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://maxklim929.github.io/MyJournalDev/Project/report.html"
+                        <a class="nav-link" href="https://maxklim929.github.io/MyJournalDev/report.html"
                             style="color:white">Report</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <h1 id="titlehead">TravelLog</h1>
-    <div id="travel-container">
-        <div class="card" style="background-color: rgb(202, 157, 111);" id="newentry">
+    <div id="lists">
+        <div class="card">
             <div class="card-body">
-                <div id="travel-forms">
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Place Name</label>
-                            <input class="form-control" id="name" placeholder="Burgers 'n Stuff" aria-required="true"
-                                autocomplete="off" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="select">Category</label>
-                            <select class="form-control" id="select" autocomplete="off">
-                                <option>Restaurant</option>
-                                <option>Park</option>
-                                <option>Store</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="city">City</label>
-                            <input class="form-control" id="city" placeholder="New York" autocomplete="off">
-                        </div>
-                        <div class="form-group">
-                            <label for="text">Description</label>
-                            <textarea class="form-control" id="text" rows="5" autocomplete="off"></textarea>
-                        </div>
-                        <div>
-                            <button id="submitbutton" class="btn" type="submit">Submit</button>
-                        </div>
-                    </form>
-                </div>
+                <h1 class="card-title">List of Daily Workouts API</h1>
+                <p class="card-text">API that shows list of workouts</p>
             </div>
         </div>
-        <div id="card-container">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title">List of Daily Affirmations API</h1>
+                <p class="card-text">API that shows list of affirmations</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title">List of Cooking Recipe API</h1>
+                <p class="card-text">API that shows a daily cooking recipe</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title">Help!</h1>
+                <p class="card-text">Don't know what to write about? <a
+                        href="https://dayoneapp.com/blog/journal-prompts/" target="_blank">Here's</a> a link to some
+                    prompts!</p>
+            </div>
         </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -97,8 +88,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="./script/travellog.js"></script>
-
+    <script src="./script/mylist.js"></script>
 </body>
 
 </html>

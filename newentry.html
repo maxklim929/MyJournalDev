@@ -2,22 +2,20 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Max Klimenko">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/myentries.css">
+  <link rel="stylesheet" href="./css/newentry.css">
+  <meta charset="utf-8">
+  <meta name="author" content="Max Klimenko">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <title>MyEntries</title>
+  <title>MyJournal</title>
 </head>
 
 <body style="background-color: rgb(251, 211, 166);">
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color:rgb(110, 38, 14)">
     <div class="container-fluid">
-      <a class="navbar-brand" href="https://maxklim929.github.io/MyJournalDev/Project/index.html"
+      <a class="navbar-brand" href="https://maxklim929.github.io/MyJournalDev/index.html"
         style="color:white"><strong>MyJournal</strong></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,55 +24,52 @@
       <div class="navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="https://maxklim929.github.io/MyJournalDev/Project/newentry.html"
+            <a class="nav-link" href="https://maxklim929.github.io/MyJournalDev/newentry.html"
               style="color:white">NewEntry</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://maxklim929.github.io/MyJournalDev/Project/myentries.html"
+            <a class="nav-link" href="https://maxklim929.github.io/MyJournalDev/myentries.html"
               style="color:white">MyEntries</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://maxklim929.github.io/MyJournalDev/Project/travellog.html"
+            <a class="nav-link" href="https://maxklim929.github.io/MyJournalDev/travellog.html"
               style="color:white">TravelLog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://maxklim929.github.io/MyJournalDev/Project/mylist.html"
+            <a class="nav-link" href="https://maxklim929.github.io/MyJournalDev/mylist.html"
               style="color:white">MyLists</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://maxklim929.github.io/MyJournalDev/Project/report.html"
+            <a class="nav-link" href="https://maxklim929.github.io/MyJournalDev/report.html"
               style="color:white">Report</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <section class="card, mx-auto" id="entries">
-    <h1 class="card-header" style="background-color:rgb(245, 245, 245)">Previous Entries</h1>
-    <div style="text-align: center">
-      <div class="modal fade" tabindex="-1" id="modalFilter">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <!--Plans to filter by Emotion with Modals-->
-            <div class="modal-header">
-              <h1 class="modal-title" id="dayFelt">Placeholder</h1>
-              <button type="button" class="close" data-dismiss="modal">
-                <span>&times;</span>
-              </button>
-            </div>
-            <div class="modal-body mx-auto" id="modalText">
 
-            </div>
-            <div class="modal-footer justify-content-start" id="subtotal">
-            </div>
+  <div id="newentry">
+    <div class="card" style="width: 90%; background-color: rgb(202, 157, 111);">
+      <div class="card-body">
+        <h1 class="text-center">New Entry...
+        </h1>
+
+        <form>
+          <div class="form-group">
+            <label for="text">Description</label>
+            <textarea class="form-control" id="text" rows="5" placeholder="Tell me about your day..."></textarea>
           </div>
-        </div>
+        </form>
+        <button type="button" class="btn btn-md" id="happy">Happy</button>
+        <button type="button" class="btn btn-md" id="sad">Sad</button>
+        <button type="button" class="btn btn-danger btn-md" id="mad">Mad</button>
+        <button type="button" class="btn btn-warning btn-md" id="thankful">Thankful</button>
+        <button type="button" class="btn btn-dark btn-md" id="nervous">Nervous</button> <br> <br>
+        <button type="button" class="btn btn-secondary btn-lg" id="subButton">Log Journal</button>
       </div>
     </div>
-  </section>
-
-  <div id="prevEntries">
   </div>
+
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -85,8 +80,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <script src="./script/myentries.js"></script>
 
+  <script src=./script/newentry.js></script>
 </body>
 
 </html>
