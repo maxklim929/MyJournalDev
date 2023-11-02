@@ -18,10 +18,10 @@ document.getElementById('submitbutton').addEventListener("click", () => {
     if (restname.length != 0) {
         document.getElementById("card-container").innerHTML +=
             `<div class="card">
-    <img src="./images/${cat}.jpeg" class="card-img-top" alt="${cat} image">
+    <img src="./images/${cat}.jpeg" class="card-img-top" alt="Image of a given ${cat}">
     <div class="card-body">
-        <h5 class="card-title">${restname}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">${cat}, ${city}</h6>
+        <h2 class="card-title">${restname}</h2>
+        <h3 class="card-subtitle mb-2 text-muted">${cat}, ${city}</h3>
         <p class="card-text">${desc}</p>
     </div>
     </div>`;
@@ -35,10 +35,10 @@ if (data != null && entries != '') {
     for (let entry of data) {
         document.getElementById("card-container").innerHTML +=
             `<div class="card">
-    <img src="./images/${entry[1]}.jpeg" class="card-img-top" alt="${entry[1]} image">
+    <img src="./images/${entry[1]}.jpeg" class="card-img-top" alt="Image on a card of the provided category, i.e. restaurant, park, store">
     <div class="card-body">
-    <h5 class="card-title">${entry[0]}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">${entry[1]}, ${entry[2]}</h6>
+    <h2 class="card-title">${entry[0]}</h2>
+    <h3 class="card-subtitle mb-2 text-muted">${entry[1]}, ${entry[2]}</h3>
     <p class="card-text">${entry[3]}</p>
     </div>
     </div>`;

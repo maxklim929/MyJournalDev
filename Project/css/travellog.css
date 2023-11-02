@@ -6,6 +6,11 @@ h1 {
     font-family: sans-serif;
 }
 
+#titlehead {
+    text-align: center;
+    background-color: white;
+}
+
 #travel-container {
     display: flex;
     flex-direction: row;
@@ -19,6 +24,11 @@ h1 {
 
 .card {
     width: 100%;
+}
+
+#submitbutton {
+    background-color: green;
+    color: white;
 }
 
 @media (max-width: 256px) {
