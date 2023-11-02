@@ -32,7 +32,7 @@ h1 {
 }
 
 /* Small Screens */
-@media (min-width: 400px) {
+@media (min-width: 500px) {
     #travel-container {
         display: flex;
         flex-direction: row;
