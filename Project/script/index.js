@@ -24,17 +24,17 @@ function showModal() {
     $('#modalInfo').modal('show');
 }
 
-function saveQuote(quote) {
-    let quotes = [];
-    if (JSON.parse(localStorage.getItem('savedQuotes')) == null) {
-        quotes.push(quote);
-        localStorage.setItem('savedQuotes', JSON.stringify(quotes));
-    } else {
-        quotes = JSON.parse(localStorage.getItem('savedQuotes'));
-        quotes.push(quote);
-        localStorage.setItem('savedQuotes', JSON.stringify(quotes));
-    }
-}
+// function saveQuote(quote) { Later Functionality
+//     let quotes = [];
+//     if (JSON.parse(localStorage.getItem('savedQuotes')) == null) {
+//         quotes.push(quote);
+//         localStorage.setItem('savedQuotes', JSON.stringify(quotes));
+//     } else {
+//         quotes = JSON.parse(localStorage.getItem('savedQuotes'));
+//         quotes.push(quote);
+//         localStorage.setItem('savedQuotes', JSON.stringify(quotes));
+//     }
+// }
 
 let randQuote = Math.random() * (quotes.length - 1);
 randQuote = Math.trunc(randQuote);
@@ -43,4 +43,4 @@ document.querySelector('#quote').innerText = quote;
 
 document.querySelector("#infoButton").addEventListener('click', () =>
     showModal());
-document.querySelector("#saveQuote").addEventListener('click', () => saveQuote(quote));
+// document.querySelector("#saveQuote").addEventListener('click', () => saveQuote(quote));
