@@ -22,3 +22,7 @@ h1 {
 a {
     color: rgb(3, 3, 181);
 }
+
+#bored, #define, #ins_quote, #author, #help {
+    font-size: 20px; background-color: white; padding: 15px;
+}

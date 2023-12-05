@@ -54,26 +54,59 @@
     <div id="lists">
         <div class="card">
             <div class="card-body">
-                <h1 class="card-title">List of Daily Workouts API</h1>
-                <p class="card-text">API that shows list of workouts</p>
+                <h1 class="card-title" id="randFact">A Random Fact</h1>
+                <div class="card-text" id="define" style="font-size: 20px;"></div>
+                <button type="button" class="btn btn-primary" style="margin-top: 10px;" id="save_fact">Save For
+                    Later</button>
             </div>
+            <div>Credit: <a href="https://uselessfacts.jsph.pl">https://uselessfacts.jsph.pl</a></div>
         </div>
         <div class="card">
             <div class="card-body">
-                <h1 class="card-title">List of Daily Affirmations API</h1>
-                <p class="card-text">API that shows list of affirmations</p>
+                <h1 class="card-title" id="randFact">An Activity</h1>
+                <div class="card-text" id="bored"></div>
+                <button type="button" class="btn btn-primary" style="margin-top: 10px;" id="save_bored">Save For
+                    Later</button>
             </div>
+            <div>Credit: <a href="https://www.boredapi.com">https://www.boredapi.com</a></div>
         </div>
         <div class="card">
             <div class="card-body">
-                <h1 class="card-title">List of Cooking Recipe API</h1>
-                <p class="card-text">API that shows a daily cooking recipe</p>
+                <h1 class="card-title" id="randFact">An Inspirational Quote</h1>
+                <div class="card-text" id="ins_quote" style="font-size: 20px;"></div>
+                <div id="author"></div>
+                <button type="button" class="btn btn-primary" style="margin-top: 10px;" id="save_quote">Save For
+                    Later</button>
+            </div>
+            <div>Credit: <a href="https://api.quotable.io">https://api.quotable.io</a></div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title">A Current Event</h1>
+                <div class="card" style="width: 50%; background-color: white;">
+                    <img class="card-img-top" alt="Card image cap" id="c1_img">
+                    <div class="card-body">
+                        <h1 class="card-title" id="c1_title">Card title</h1>
+                        <h2 class="card-text" id="news1"></h2>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary" style="margin-top: 10px;" id="save_c1">Save For
+                    Later</button>
+                <div class="card" style="width: 50%; background-color: white;">
+                    <img class="card-img-top" alt="Card image cap" id="c2_img">
+                    <div class="card-body">
+                        <h1 class="card-title" id="c2_title">Card title</h1>
+                        <h2 class="card-text" id="news2"></h2>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary" style="margin-top: 10px;" id="save_c2">Save For
+                    Later</button>
             </div>
         </div>
         <div class="card">
             <div class="card-body">
                 <h1 class="card-title">Help!</h1>
-                <p class="card-text">Don't know what to write about? <a
+                <p class="card-text" id="help">Need more to write about? <a
                         href="https://dayoneapp.com/blog/journal-prompts/" target="_blank">Here's</a> a link to some
                     prompts!</p>
             </div>
