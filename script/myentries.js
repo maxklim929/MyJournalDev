@@ -6,17 +6,17 @@ function defaultColors() {
   sad.style.backgroundColor = 'blue';
   sad.style.color = 'white';
 
-  mad.style.backgroundColor = 'red';
+  mad.style.backgroundColor = 'rgb(126, 0, 0)';
   mad.style.color = 'white';
 
-  thankful.style.backgroundColor = 'rgb(214, 171, 0)';
+  thankful.style.backgroundColor = 'rgb(130, 109, 25)';
   thankful.style.color = 'white';
 
   nervous.style.backgroundColor = 'black';
   nervous.style.color = 'white';
 
   all.style.backgroundColor = 'rgb(70, 50, 30)';
-  nervous.style.color = 'white';
+  all.style.color = 'white';
 }
 
 function filterEntries(filter_mood) {
