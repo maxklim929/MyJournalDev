@@ -1,6 +1,8 @@
 fetch(`https://uselessfacts.jsph.pl/api/v2/facts/today`).then(response => response.json()).then(data => {
     document.getElementById("define").innerText = data["text"];
     document.getElementById("save_fact").addEventListener('click', () => {
+        document.getElementById("save_fact").style.backgroundColor = 'white';
+        document.getElementById("save_fact").style.color = 'blue';
         if (localStorage.getItem('Facts') == null) {
             var new_data = [document.getElementById("define").innerText];
             console.log(new_data);
@@ -17,6 +19,8 @@ fetch(`https://uselessfacts.jsph.pl/api/v2/facts/today`).then(response => respon
 fetch(`https://www.boredapi.com/api/activity/`).then(response => response.json()).then(data => {
     document.getElementById("bored").innerText = data["activity"];
     document.getElementById("save_bored").addEventListener('click', () => {
+        document.getElementById("save_bored").style.backgroundColor = 'white';
+        document.getElementById("save_bored").style.color = 'blue';
         if (localStorage.getItem('Bored') == null) {
             var new_data = [document.getElementById("bored").innerText];
             console.log(new_data);
@@ -33,6 +37,8 @@ fetch(`https://www.boredapi.com/api/activity/`).then(response => response.json()
 fetch(`https://api.quotable.io/random`).then(response => response.json()).then(data => {
     document.getElementById("ins_quote").innerHTML = `${data["content"]} <br> <i>-${data["author"]}</i>`;
     document.getElementById("save_quote").addEventListener('click', () => {
+        document.getElementById("save_quote").style.backgroundColor = 'white';
+        document.getElementById("save_quote").style.color = 'blue';
         if (localStorage.getItem('Quote') == null) {
             var new_data = [document.getElementById("ins_quote").innerHTML];
             console.log(new_data);
@@ -67,6 +73,8 @@ fetch(`https://api.nytimes.com/svc/topstories/v2/world.json?api-key=H92OvzsBcMz4
                                                     <br> ${news_arr[1]["abstract"]}
                                                     <br> <a href="${news_arr[1]["url"]}">Link to Article</a>`;
     document.getElementById("save_c1").addEventListener('click', () => {
+        document.getElementById("save_c1").style.backgroundColor = 'white';
+        document.getElementById("save_c1").style.color = 'blue';
         if (localStorage.getItem('News') == null) {
             var new_data = [data["results"][c1_ind]];
             localStorage.setItem('News', JSON.stringify(new_data));
@@ -78,6 +86,8 @@ fetch(`https://api.nytimes.com/svc/topstories/v2/world.json?api-key=H92OvzsBcMz4
         }
     });
     document.getElementById("save_c2").addEventListener('click', () => {
+        document.getElementById("save_c2").style.backgroundColor = 'white';
+        document.getElementById("save_c2").style.color = 'blue';
         if (localStorage.getItem('News') == null) {
             var new_data = [data["results"][c1_ind]];
             localStorage.setItem('News', JSON.stringify(new_data));
