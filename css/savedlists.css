@@ -2,6 +2,11 @@
     font-family: serif;
 }
 
+#btn_contain {
+    display: flex;
+    justify-content: space-around;
+}
+
 #fact_filter, #act_filter, #news_filter, #quote_filter {
-    width: 10rem;
+    width: 20rem;
 }
