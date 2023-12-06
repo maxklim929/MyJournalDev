@@ -26,3 +26,7 @@ a {
 #bored, #define, #ins_quote, #author, #help {
     font-size: 20px; background-color: white; padding: 15px;
 }
+
+.btn-primary {
+    background-color: blue;
+}
