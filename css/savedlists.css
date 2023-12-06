@@ -4,9 +4,19 @@
 
 #btn_contain {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
 }
 
 #fact_filter, #act_filter, #news_filter, #quote_filter {
     width: 20rem;
+    margin-top: 10px;
+}
+
+/* Small Screens */
+@media (min-width: 450px) {
+    #btn_contain {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
 }

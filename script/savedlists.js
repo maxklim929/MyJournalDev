@@ -1,13 +1,13 @@
 function defaultColors() {
     newsbtn.style.backgroundColor = 'blue';
     newsbtn.style.color = 'white';
-  
+
     factbtn.style.backgroundColor = 'blue';
     factbtn.style.color = 'white';
-  
+
     actbtn.style.backgroundColor = 'blue';
     actbtn.style.color = 'white';
-  
+
     quotebtn.style.backgroundColor = 'blue';
     quotebtn.style.color = 'white';
 }
@@ -44,7 +44,7 @@ newsbtn.addEventListener('click', () => {
         }
         card += `</div> </div>`;
         document.getElementById("container").innerHTML = card;
-    } 
+    }
 });
 
 factbtn.addEventListener('click', () => {
@@ -52,25 +52,25 @@ factbtn.addEventListener('click', () => {
     factbtn.style.backgroundColor = 'white';
     factbtn.style.color = 'blue';
     document.getElementById("container").innerHTML = '';
-    var card = `        
-    <div class="card">
-        <div class="card-body">
-
-        
-    `
     if (localStorage.getItem('Facts') != null) {
+        var card = `        
+        <div class="card">
+            <div class="card-body">
+    
+            
+        `
         var data = JSON.parse(localStorage.getItem('Facts'));
         for (let entry of data) {
             card += `
-            <div class="card" style="width: 100%; background-color: white;">
+            <div class="card" style="width: 100%;">
                 <div class="card-body">
-                    <div class="card-title"><strong>${entry}</strong></div>
+                    <div class="card-title" style="background-color: white;"><strong>${entry}</strong></div>
                 </div>
             </div>`;
         }
+        card += `</div> </div>`;
+        document.getElementById("container").innerHTML = card;
     }
-    card += `</div> </div>`;
-    document.getElementById("container").innerHTML = card;
 });
 
 actbtn.addEventListener('click', () => {
@@ -78,25 +78,27 @@ actbtn.addEventListener('click', () => {
     actbtn.style.backgroundColor = 'white';
     actbtn.style.color = 'blue';
     document.getElementById("container").innerHTML = '';
-    var card = `        
-    <div class="card">
-        <div class="card-body">
 
-        
-    `
     if (localStorage.getItem('Bored') != null) {
+        var card = `        
+        <div class="card">
+            <div class="card-body">
+    
+            
+        `
         var data = JSON.parse(localStorage.getItem('Bored'));
         for (let entry of data) {
             card += `
-            <div class="card" style="width: 100%; background-color: white;">
+            <div class="card" style="width: 100%;">
                 <div class="card-body">
-                    <div class="card-title"><strong>${entry}</strong></div>
+                    <div class="card-title" style="background-color: white;"><strong>${entry}</strong></div>
                 </div>
             </div>`;
         }
+        card += `</div> </div>`;
+        document.getElementById("container").innerHTML = card;
     }
-    card += `</div> </div>`;
-    document.getElementById("container").innerHTML = card;
+
 });
 
 quotebtn.addEventListener('click', () => {
@@ -104,25 +106,27 @@ quotebtn.addEventListener('click', () => {
     quotebtn.style.backgroundColor = 'white';
     quotebtn.style.color = 'blue';
     document.getElementById("container").innerHTML = '';
-    var card = `        
-    <div class="card">
-        <div class="card-body">
 
-        
-    `
     if (localStorage.getItem('Quote') != null) {
+        var card = `        
+        <div class="card">
+            <div class="card-body">
+    
+            
+        `
         var data = JSON.parse(localStorage.getItem('Quote'));
         for (let entry of data) {
             card += `
-            <div class="card" style="width: 100%; background-color: white;">
+            <div class="card" style="width: 100%;">
                 <div class="card-body">
-                    <div class="card-title"><strong>${entry}</strong></div>
+                    <div class="card-title" style="background-color: white;"><strong>${entry}</strong></div>
                 </div>
             </div>`;
         }
+        card += `</div> </div>`;
+        document.getElementById("container").innerHTML = card;
     }
-    card += `</div> </div>`;
-    document.getElementById("container").innerHTML = card;
+
 });
 
 defaultColors();
