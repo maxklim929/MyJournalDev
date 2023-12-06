@@ -18,7 +18,7 @@ fetch(`https://www.boredapi.com/api/activity/`).then(response => response.json()
     document.getElementById("bored").innerText = data["activity"];
     document.getElementById("save_bored").addEventListener('click', () => {
         if (localStorage.getItem('Bored') == null) {
-            var new_data = [document.getElementById("define").innerText];
+            var new_data = [document.getElementById("bored").innerText];
             console.log(new_data);
             localStorage.setItem('Bored', JSON.stringify(new_data));
         } else {
