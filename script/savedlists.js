@@ -1,10 +1,26 @@
-console.log("Hello world");
+function defaultColors() {
+    newsbtn.style.backgroundColor = 'blue';
+    newsbtn.style.color = 'white';
+  
+    factbtn.style.backgroundColor = 'blue';
+    factbtn.style.color = 'white';
+  
+    actbtn.style.backgroundColor = 'blue';
+    actbtn.style.color = 'white';
+  
+    quotebtn.style.backgroundColor = 'blue';
+    quotebtn.style.color = 'white';
+}
+
 var newsbtn = document.getElementById("news_filter");
 var factbtn = document.getElementById("fact_filter");
 var actbtn = document.getElementById("act_filter");
 var quotebtn = document.getElementById("quote_filter");
 
 newsbtn.addEventListener('click', () => {
+    defaultColors();
+    newsbtn.style.backgroundColor = 'white';
+    newsbtn.style.color = 'blue';
     document.getElementById("container").innerHTML = '';
     var card = `        
     <div class="card">
@@ -15,7 +31,6 @@ newsbtn.addEventListener('click', () => {
     if (localStorage.getItem('News') != null) {
         var data = JSON.parse(localStorage.getItem('News'));
         for (let entry of data) {
-            console.log(entry["multimedia"][0]["url"]);
             card += `
             <div class="card" style="width: 100%; background-color: white;">
                 <img class="card-img-top" alt="Card image cap" src=${entry["multimedia"][0]["url"]}>
@@ -27,12 +42,15 @@ newsbtn.addEventListener('click', () => {
                 </div>
             </div>`;
         }
-    }
-    card += `</div> </div>`;
-    document.getElementById("container").innerHTML = card;
+        card += `</div> </div>`;
+        document.getElementById("container").innerHTML = card;
+    } 
 });
 
 factbtn.addEventListener('click', () => {
+    defaultColors();
+    factbtn.style.backgroundColor = 'white';
+    factbtn.style.color = 'blue';
     document.getElementById("container").innerHTML = '';
     var card = `        
     <div class="card">
@@ -46,7 +64,7 @@ factbtn.addEventListener('click', () => {
             card += `
             <div class="card" style="width: 100%; background-color: white;">
                 <div class="card-body">
-                    <h1 class="card-title"><strong>${entry}</strong></h1>
+                    <div class="card-title"><strong>${entry}</strong></div>
                 </div>
             </div>`;
         }
@@ -56,6 +74,9 @@ factbtn.addEventListener('click', () => {
 });
 
 actbtn.addEventListener('click', () => {
+    defaultColors();
+    actbtn.style.backgroundColor = 'white';
+    actbtn.style.color = 'blue';
     document.getElementById("container").innerHTML = '';
     var card = `        
     <div class="card">
@@ -69,7 +90,7 @@ actbtn.addEventListener('click', () => {
             card += `
             <div class="card" style="width: 100%; background-color: white;">
                 <div class="card-body">
-                    <h1 class="card-title"><strong>${entry}</strong></h1>
+                    <div class="card-title"><strong>${entry}</strong></div>
                 </div>
             </div>`;
         }
@@ -79,7 +100,9 @@ actbtn.addEventListener('click', () => {
 });
 
 quotebtn.addEventListener('click', () => {
-    quotebtn.classList.add()
+    defaultColors();
+    quotebtn.style.backgroundColor = 'white';
+    quotebtn.style.color = 'blue';
     document.getElementById("container").innerHTML = '';
     var card = `        
     <div class="card">
@@ -93,7 +116,7 @@ quotebtn.addEventListener('click', () => {
             card += `
             <div class="card" style="width: 100%; background-color: white;">
                 <div class="card-body">
-                    <h1 class="card-title"><strong>${entry}</strong></h1>
+                    <div class="card-title"><strong>${entry}</strong></div>
                 </div>
             </div>`;
         }
@@ -101,3 +124,5 @@ quotebtn.addEventListener('click', () => {
     card += `</div> </div>`;
     document.getElementById("container").innerHTML = card;
 });
+
+defaultColors();
