@@ -1,12 +1,50 @@
 fetch(`https://uselessfacts.jsph.pl/api/v2/facts/today`).then(response => response.json()).then(data => {
     document.getElementById("define").innerText = data["text"];
+    document.getElementById("save_fact").addEventListener('click', () => {
+        if (localStorage.getItem('Facts') == null) {
+            var new_data = [document.getElementById("define").innerText];
+            console.log(new_data);
+            localStorage.setItem('Facts', JSON.stringify(new_data));
+        } else {
+            var curr_hist = JSON.parse(localStorage.getItem('Facts'));
+            curr_hist.push(document.getElementById("define").innerText)
+            localStorage.setItem('Facts', JSON.stringify(curr_hist));
+            curr_hist = JSON.parse(localStorage.getItem('Facts'));
+            console.log(curr_hist);
+        }
+    });
 });
 fetch(`https://www.boredapi.com/api/activity/`).then(response => response.json()).then(data => {
     document.getElementById("bored").innerText = data["activity"];
+    document.getElementById("save_bored").addEventListener('click', () => {
+        if (localStorage.getItem('Bored') == null) {
+            var new_data = [document.getElementById("define").innerText];
+            console.log(new_data);
+            localStorage.setItem('Bored', JSON.stringify(new_data));
+        } else {
+            var curr_hist = JSON.parse(localStorage.getItem('Bored'));
+            curr_hist.push(document.getElementById("bored").innerText)
+            localStorage.setItem('Bored', JSON.stringify(curr_hist));
+            curr_hist = JSON.parse(localStorage.getItem('Bored'));
+            console.log(curr_hist);
+        }
+    });
 });
 fetch(`https://api.quotable.io/random`).then(response => response.json()).then(data => {
-    document.getElementById("ins_quote").innerText = data["content"];
-    document.getElementById("author").innerHTML = `<i>-${data["author"]}</i>`;
+    document.getElementById("ins_quote").innerHTML = `${data["content"]} <br> <i>-${data["author"]}</i>`;
+    document.getElementById("save_quote").addEventListener('click', () => {
+        if (localStorage.getItem('Quote') == null) {
+            var new_data = [document.getElementById("ins_quote").innerHTML];
+            console.log(new_data);
+            localStorage.setItem('Quote', JSON.stringify(new_data));
+        } else {
+            var curr_hist = JSON.parse(localStorage.getItem('Quote'));
+            curr_hist.push(document.getElementById("ins_quote").innerHTML)
+            localStorage.setItem('Quote', JSON.stringify(curr_hist));
+            curr_hist = JSON.parse(localStorage.getItem('Quote'));
+            console.log(curr_hist);
+        }
+    });
 });
 fetch(`https://api.nytimes.com/svc/topstories/v2/world.json?api-key=H92OvzsBcMz4TWXcTURLiKBbvlCGFvGa`).then(response => response.json()).then(data => {
     var c1_ind = Math.floor(Math.random() * data["results"].length);
@@ -31,20 +69,17 @@ fetch(`https://api.nytimes.com/svc/topstories/v2/world.json?api-key=H92OvzsBcMz4
     document.getElementById("save_c1").addEventListener('click', () => {
         if (localStorage.getItem('News') == null) {
             var new_data = [data["results"][c1_ind]];
-            console.log(new_data);
             localStorage.setItem('News', JSON.stringify(new_data));
         } else {
             var curr_hist = JSON.parse(localStorage.getItem('News'));
             curr_hist.push(data["results"][c1_ind])
             localStorage.setItem('News', JSON.stringify(curr_hist));
             curr_hist = JSON.parse(localStorage.getItem('News'));
-            console.log(curr_hist);
         }
     });
     document.getElementById("save_c2").addEventListener('click', () => {
         if (localStorage.getItem('News') == null) {
             var new_data = [data["results"][c1_ind]];
-            console.log(new_data);
             localStorage.setItem('News', JSON.stringify(new_data));
         } else {
             var curr_hist = JSON.parse(localStorage.getItem('News'));
@@ -54,7 +89,6 @@ fetch(`https://api.nytimes.com/svc/topstories/v2/world.json?api-key=H92OvzsBcMz4
             console.log(curr_hist);
         }
     });
-
 });
 
 

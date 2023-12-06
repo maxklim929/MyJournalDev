@@ -49,10 +49,33 @@ let mad = document.querySelector("#mad");
 let thankful = document.querySelector("#thankful");
 let moody = document.querySelector("#nervous");
 let moods = [];
-happy.addEventListener('click', () => moods.push("Happy"));
-sad.addEventListener('click', () => moods.push("Sad"));
-mad.addEventListener('click', () => moods.push("Mad"));
-thankful.addEventListener('click', () => moods.push("Thankful"));
-moody.addEventListener('click', () => moods.push("Nervous"));
+happy.addEventListener('click', function () {
+  moods.push("Happy");
+  happy.style.backgroundColor = 'white';
+  happy.style.color = 'green';
+});
+sad.addEventListener('click', function () {
+  moods.push("Sad");
+  sad.style.backgroundColor = 'white';
+  sad.style.color = 'blue';
+});
+mad.addEventListener('click', function () {
+  moods.push("Mad");
+  mad.classList.remove('btn-danger');
+  mad.classList.add('btn-outline-danger')
+  mad.style.backgroundColor = 'white';
+});
+thankful.addEventListener('click', function () {
+  moods.push("Thankful");
+  thankful.classList.remove('btn-warning');
+  thankful.classList.add('btn-outline-warning')
+  thankful.style.backgroundColor = 'white';
+});
+moody.addEventListener('click', function () {
+  moods.push("Nervous");
+  nervous.classList.remove('btn-dark');
+  nervous.classList.add('btn-outline-dark')
+  nervous.style.backgroundColor = 'white';
+});
 
 btn.addEventListener('click', () => createEntry(moods));

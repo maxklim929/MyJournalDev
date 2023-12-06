@@ -10,3 +10,52 @@ h1 {
     width: 80%;
     margin-top: 1rem;
 }
+
+
+#main_contain {
+    display: flex;
+    justify-content: space-between;
+}
+
+#btns {
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    margin-right: 50px;
+    width: 20%;
+}
+
+#happy {
+    color: white;
+    background-color: green;
+}
+
+#sad {
+    color: white;
+    background-color: blue;
+}
+
+#mad {
+    background-color: red;
+    color: white;
+}
+
+#thankful {
+    background-color: rgb(214, 171, 0);
+    color: white;
+}
+
+#nervous {
+    background-color: black;
+    color: white;
+}
+
+#all {
+    background-color: rgb(70, 50, 30);
+    color: white;
+}
+
+
+#happy, #sad, #mad, #thankful, #nervous, #all {
+    margin-top: 10px;
+}

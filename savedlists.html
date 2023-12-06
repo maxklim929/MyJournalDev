@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Max Klimenko">
+    <link rel="stylesheet" href="./css/savedlists.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Report</title>
+    <title>HomePage</title>
 </head>
 
 <body style="background-color: rgb(251, 211, 166);">
@@ -53,56 +54,18 @@
             </div>
         </div>
     </nav>
+    <header class="mx-auto" style="margin-top: 20px;">
+        <h1 style="text-align:center;">Click A Filter Below For Saved Items</h1>
+    </header>
+    <br>
+    <br>
 
-    <h1>Report</h1>
-    <ol>
-        <li>
-            This is the url to my github repo: https://github.com/maxklim929/MyJournalDev/tree/main/
-        </li>
-        <li>
-            This is the url to the published site: https://maxklim929.github.io/MyJournalDev/index.html
-        </li>
-        <li>
-            This is "report.html"
-        </li>
-        <li>
-            index.html (1) is the home page for the site, NewEntry (2) is where the user types in a new entry,
-            MyEntries (3) is where the site keeps track of the entries, TravelLog (4) is where the site can keep track
-            of
-            your
-            inputted travels, and MyLists (5) will have api of lists like workout routines and cooking recipes
-            that will be implemented in the next phase.
-        </li>
-        <li>
-            Meaningful headers in place.
-        </li>
-        <li>
-            Implemented a nav bar.
-        </li>
-        <li>
-            Bootstrap handles a good chunk, but for the TravelLog page, on mobile screens (256) it will show in
-            column
-            rather than row.
-        </li>
-        <li>
-            Alt for home page implemented, same with images from TravelLog, i.e. Restaurant, Park, and Store.
-        </li>
-        <li>
-            No errors.
-        </li>
-        <li>
-            Fonts implemented.
-        </li>
-        <li>
-            TravelLog has a form, one field is required, that being the Place Name field.
-        </li>
-        <li>
-            MyLists has a link to Journal Prompts for help.
-        </li>
-        <li>
-            MyLists will have lists of ideas for people to try out or write about: workouts, affirmations, recipes.
-        </li>
-    </ol>
+    <div style="text-align: center;"><button type="button" class="btn btn-lg" id="fact_filter">Facts</button> <button type="button"
+            class="btn btn-lg" id="act_filter">Activities</button>
+        <button type="button" class="btn btn-lg" id="quote_filter">Quotes</button> <button type="button"
+            class="btn btn-lg" id="news_filter">News</button>
+    </div>
+    <div id="container" style="width: 50%; margin: auto; margin-top: 10px;"></div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -112,6 +75,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="./script/savedlists.js"></script>
+
 </body>
 
 </html>

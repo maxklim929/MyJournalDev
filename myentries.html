@@ -42,6 +42,10 @@
               style="color:white">MyLists</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="https://maxklim929.github.io/MyJournalDev/savedlists.html"
+              style="color:white">SavedLists</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="https://maxklim929.github.io/MyJournalDev/report.html"
               style="color:white">Report</a>
           </li>
@@ -49,31 +53,18 @@
       </div>
     </div>
   </nav>
-  <section class="card, mx-auto" id="entries">
-    <h1 class="card-header" style="background-color:rgb(245, 245, 245)">Previous Entries</h1>
-    <div style="text-align: center">
-      <div class="modal fade" tabindex="-1" id="modalFilter">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <!--Plans to filter by Emotion with Modals-->
-            <div class="modal-header">
-              <h1 class="modal-title" id="dayFelt">Placeholder</h1>
-              <button type="button" class="close" data-dismiss="modal">
-                <span>&times;</span>
-              </button>
-            </div>
-            <div class="modal-body mx-auto" id="modalText">
-
-            </div>
-            <div class="modal-footer justify-content-start" id="subtotal">
-            </div>
-          </div>
-        </div>
-      </div>
+  <h1 class="card-header" style="text-align: center;">Previous Entries</h1>
+  <div id="main_contain">
+    <div style="width:100%;" id="prevEntries">
     </div>
-  </section>
-
-  <div id="prevEntries">
+    <div id="btns">
+      <button type="button" class="btn btn-md" id="happy">Happy</button>
+      <button type="button" class="btn btn-md" id="sad">Sad</button>
+      <button type="button" class="btn btn-md" id="mad">Mad</button>
+      <button type="button" class="btn btn-md" id="thankful">Thankful</button>
+      <button type="button" class="btn btn-md" id="nervous">Nervous</button>
+      <button type="button" class="btn btn-md" id="all">All</button>
+    </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

@@ -1,3 +1,9 @@
 * {
-    background-color: red;
+    font-family: serif;
+}
+
+#fact_filter, #act_filter, #news_filter, #quote_filter {
+    width: 10rem;
+    background-color: blue;
+    color: white;
 }
