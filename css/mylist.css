@@ -23,11 +23,21 @@ a {
     color: rgb(3, 3, 181);
 }
 
-#bored, #define, #ins_quote, #author, #help {
-    font-size: 20px; background-color: white; padding: 15px;
+#bored,
+#define,
+#ins_quote,
+#author,
+#help {
+    font-size: 20px;
+    background-color: white;
+    padding: 15px;
 }
 
-#save_fact, #save_bored, #save_quote, #save_c1, #save_c2 {
+#save_fact,
+#save_bored,
+#save_quote,
+#save_c1,
+#save_c2 {
     background-color: blue;
     color: white;
 }

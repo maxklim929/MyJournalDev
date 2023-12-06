@@ -56,6 +56,11 @@ h1 {
 }
 
 
-#happy, #sad, #mad, #thankful, #nervous, #all {
+#happy,
+#sad,
+#mad,
+#thankful,
+#nervous,
+#all {
     margin-top: 10px;
 }

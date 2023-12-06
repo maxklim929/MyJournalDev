@@ -7,7 +7,10 @@
     flex-direction: column;
 }
 
-#fact_filter, #act_filter, #news_filter, #quote_filter {
+#fact_filter,
+#act_filter,
+#news_filter,
+#quote_filter {
     width: 20rem;
     margin-top: 10px;
 }
