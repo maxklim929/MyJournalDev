@@ -27,6 +27,7 @@ a {
     font-size: 20px; background-color: white; padding: 15px;
 }
 
-.btn-primary {
+#save_fact, #save_bored, #save_quote, #save_c1, #save_c2 {
     background-color: blue;
+    color: white;
 }
