@@ -89,11 +89,11 @@ fetch(`https://api.nytimes.com/svc/topstories/v2/world.json?api-key=H92OvzsBcMz4
         document.getElementById("save_c2").style.backgroundColor = 'white';
         document.getElementById("save_c2").style.color = 'blue';
         if (localStorage.getItem('News') == null) {
-            var new_data = [data["results"][c1_ind]];
+            var new_data = [data["results"][c2_ind]];
             localStorage.setItem('News', JSON.stringify(new_data));
         } else {
             var curr_hist = JSON.parse(localStorage.getItem('News'));
-            curr_hist.push(data["results"][c1_ind])
+            curr_hist.push(data["results"][c2_ind])
             localStorage.setItem('News', JSON.stringify(curr_hist));
             curr_hist = JSON.parse(localStorage.getItem('News'));
             console.log(curr_hist);

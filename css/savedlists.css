@@ -2,6 +2,12 @@
     font-family: serif;
 }
 
+#main_contain {
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
 #btn_contain {
     display: flex;
     flex-direction: column;
@@ -11,15 +17,45 @@
 #act_filter,
 #news_filter,
 #quote_filter {
-    width: 20rem;
     margin-top: 10px;
+}
+
+.card-body {
+    font-size: 10px
+}
+
+.card-title {
+    font-size: 15px
 }
 
 /* Small Screens */
 @media (min-width: 450px) {
+
+    #fact_filter,
+    #act_filter,
+    #news_filter,
+    #quote_filter {
+        width: 20rem;
+    }
+
+    #act_filter,
+    #news_filter,
+    #quote_filter {
+        width: 20rem;
+        margin-left: 10px;
+    }
+
     #btn_contain {
         display: flex;
         justify-content: space-around;
         flex-direction: row;
+    }
+
+    .card-body {
+        font-size: 20px
+    }
+
+    .card-title {
+        font-size: 30px
     }
 }

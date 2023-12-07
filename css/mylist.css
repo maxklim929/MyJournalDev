@@ -33,6 +33,11 @@ a {
     padding: 15px;
 }
 
+#c1_card,
+#c2_card {
+    width: 100%;
+}
+
 #save_fact,
 #save_bored,
 #save_quote,
@@ -40,4 +45,23 @@ a {
 #save_c2 {
     background-color: blue;
     color: white;
+}
+
+/* Small Screens */
+@media (min-width: 450px) {
+
+    #news1,
+    #news2 {
+        font-size: 20px
+    }
+
+    #c1_title,
+    #c2_title {
+        font-size: 30px
+    }
+
+    #c1_card,
+    #c2_card {
+        width: 50%;
+    }
 }
