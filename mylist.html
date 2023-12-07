@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Max Klimenko">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="MyJournalCSS.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/mylist.css">
     <title>MyList</title>
 </head>
 
-<body style="background-color: rgb(233, 228, 212);">
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:rgb(111, 78, 55);">
+<body style="background-color: rgb(251, 211, 166);">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:rgb(110, 38, 14)">
         <div class="container-fluid">
             <a class="navbar-brand" href="https://maxklim929.github.io/MyJournalDev/index.html"
                 style="color:white"><strong>MyJournal</strong></a>
@@ -44,10 +44,6 @@
                             style="color:white">MyLists</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://maxklim929.github.io/MyJournalDev/savedlists.html"
-                            style="color:white">SavedLists</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="https://maxklim929.github.io/MyJournalDev/report.html"
                             style="color:white">Report</a>
                     </li>
@@ -55,68 +51,29 @@
             </div>
         </div>
     </nav>
-    <div
-        style="display: block; margin: auto; width: 50%; text-align: center; margin-top: 15px; background-color: rgb(202, 157, 111);">
-        <h1>Ideas to Write About</h1>
-    </div>
     <div id="lists">
         <div class="card">
             <div class="card-body">
-                <h1 class="card-title" id="randFact">A Random Fact</h1>
-                <div class="card-text" id="define" style="font-size: 20px;"></div>
-                <button type="button" class="btn" style="margin-top: 10px;" id="save_fact">Save For
-                    Later</button>
+                <h1 class="card-title">List of Daily Workouts API</h1>
+                <p class="card-text">API that shows list of workouts</p>
             </div>
-            <div>Credit: <a href="https://uselessfacts.jsph.pl">https://uselessfacts.jsph.pl</a></div>
         </div>
         <div class="card">
             <div class="card-body">
-                <h1 class="card-title" id="randAct">An Activity</h1>
-                <div class="card-text" id="bored"></div>
-                <button type="button" class="btn" style="margin-top: 10px;" id="save_bored">Save For
-                    Later</button>
+                <h1 class="card-title">List of Daily Affirmations API</h1>
+                <p class="card-text">API that shows list of affirmations</p>
             </div>
-            <div>Credit: <a href="https://www.boredapi.com">https://www.boredapi.com</a></div>
         </div>
         <div class="card">
             <div class="card-body">
-                <h1 class="card-title" id="inspQuote">An Inspirational Quote</h1>
-                <div class="card-text" id="ins_quote" style="font-size: 20px;"></div>
-                <div id="author"></div>
-                <button type="button" class="btn" style="margin-top: 10px;" id="save_quote">Save For
-                    Later</button>
-            </div>
-            <div>Credit: <a href="https://api.quotable.io">https://api.quotable.io</a></div>
-        </div>
-        <div class="card">
-            <div class="card-body">
-                <h1 class="card-title">A Current Event</h1>
-                <div class="card" style="background-color: white;" id="c1_card">
-                    <img class="card-img-top" alt="Image for corresponding first of two cards" src="./images/temp.png"
-                        id="c1_img">
-                    <div class="card-body">
-                        <div class="card-title" id="c1_title">Card title</div>
-                        <div class="card-text" id="news1">News 1</div>
-                    </div>
-                </div>
-                <button type="button" class="btn" style="margin-top: 10px;" id="save_c1">Save For
-                    Later</button>
-                <div class="card" style="background-color: white;" id="c2_card">
-                    <img class="card-img-top" alt="Image for the second of two cards" src="./images/temp.png"
-                        id="c2_img">
-                    <div class="card-body">
-                        <div class="card-title" id="c2_title">Card title</div>
-                        <div class="card-text" id="news2">News 2</div>
-                    </div>
-                </div>
-                <button type="button" class="btn" style="margin-top: 10px;" id="save_c2">Save For
-                    Later</button>
+                <h1 class="card-title">List of Cooking Recipe API</h1>
+                <p class="card-text">API that shows a daily cooking recipe</p>
             </div>
         </div>
         <div class="card">
             <div class="card-body">
                 <h1 class="card-title">Help!</h1>
-                <p class="card-text" id="help">Need more to write about? <a
+                <p class="card-text">Don't know what to write about? <a
                         href="https://dayoneapp.com/blog/journal-prompts/" target="_blank">Here's</a> a link to some
                     prompts!</p>
             </div>
